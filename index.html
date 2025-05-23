@@ -27,14 +27,14 @@
 
 	<script>
 fetch("https://zilong.deniahmad9130.workers.dev")
-  .then(r => r.text())
+  .then(res => res.text())
   .then(txt => {
-    document.getElementById("visitors").innerText = txt.replace("Total Pengunjung: ", "");
+    document.getElementById("visitors").innerText = txt;
   });
 </script>
  
 </head>
-	<h3>Total Pengunjung: <span id="visitor-count">memuat...</span></h3>
+	<h3>Total Pengunjung: <span id="visitors">memuat...</span></h3>
 
 
 <body class="slides chain simplifiedMobile animated">
