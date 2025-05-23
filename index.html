@@ -32,9 +32,48 @@ fetch("https://zilong.deniahmad9130.workers.dev")
     document.getElementById("visitors").innerText = txt;
   });
 </script>
+	<style>
+  #counter-box {
+    background: rgba(0, 0, 0, 0.6);
+    color: #00ff88;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,255,136,0.6);
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .counter-label {
+    margin-right: 5px;
+  }
+
+  .counter-number {
+    color: #ffffff;
+    background: #00ff88;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    #counter-box {
+      font-size: 1rem;
+      padding: 10px 16px;
+    }
+  }
+</style>
+
  
 </head>
-	<h3>Total Pengunjung: <span id="visitors">memuat...</span></h3>
+<div id="counter-box">
+  <span class="counter-label">Total Pengunjung:</span>
+  <span id="visitors" class="counter-number">memuat...</span>
+</div>
 
 
 <body class="slides chain simplifiedMobile animated">
