@@ -33,7 +33,7 @@
   // fetch(`https://api.countapi.dev/create?namespace=${namespace}&key=${key}&value=9000`);
 
   // Hit + ambil jumlah
-  	fetch(`https://api.countapi.dev/hit/${namespace}/${key}`)
+  	fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`)
     	.then(res => res.json())
     	.then(data => {
      	 document.getElementById("visitor-count").innerText = data.value;
