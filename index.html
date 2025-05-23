@@ -33,6 +33,49 @@ fetch("https://zilong.deniahmad9130.workers.dev")
   });
 </script>
 <style>
+	.button1 {
+  display: inline-block;
+  border-radius: 4px;
+background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 12px;
+      backdrop-filter: blur(5px);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
   #counter-float {
     position: fixed;
     top: 20px;
@@ -303,6 +346,7 @@ fetch("https://zilong.deniahmad9130.workers.dev")
             <li class="col-6-12 left box-73">
               <h1 class="ae-2">Nyasar Wak?</h1>
               <p class="ae-3"><span class="opacity-8">Akses Channel lewat OTT Navigator yak, Nih bisa download dibawah</span></p>
+		    <button class="button1" style="vertical-align:middle"><span>Hover </span></button>
             </li>
             <li class="col-6-12 left ae-1 fromAbove">
               <img class="shiftImage shiftImageVertical image-73" src="assets/img/tv.png" width="802" data-action="zoom" alt="iPhone Image"/>
