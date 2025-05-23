@@ -26,19 +26,12 @@
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
 
 	<script>
- 	 const namespace = "amba-pages";   // bisa lo ganti
- 	 const key = "visits";
-
-  	// Buat hitungan awal (hapus setelah dijalankan 1x)
-  // fetch(`https://api.countapi.dev/create?namespace=${namespace}&key=${key}&value=9000`);
-
-  // Hit + ambil jumlah
-  	fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`)
-    	.then(res => res.json())
-    	.then(data => {
-     	 document.getElementById("visitor-count").innerText = data.value;
-    	});
-	</script>
+fetch("https://zilong.deniahmad9130.workers.dev")
+  .then(r => r.text())
+  .then(txt => {
+    document.getElementById("visitors").innerText = txt.replace("Total Pengunjung: ", "");
+  });
+</script>
  
 </head>
 	<h3>Total Pengunjung: <span id="visitor-count">memuat...</span></h3>
